@@ -1,0 +1,52 @@
+name: Daily finance-sector job scan
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "15 9 * * *"
+      timezone: "Asia/Dhaka"
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python packages
+        run: pip install -r requirements.txt
+
+      - name: Install Chromium
+        run: playwright install --with-deps chromium
+
+      - name: Refresh company master list
+        run: python src/bootstrap_companies.py
+
+      - name: Discover career pages
+        run: python src/discover_careers.py
+
+      - name: Scan for vacancies
+        run: python src/scan_jobs.py
+
+      - name: Build dashboard
+        run: python src/render_dashboard.py
+
+      - name: Save results
+        run: |
+          git config user.name "job-monitor-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/companies.csv data docs
+          git diff --cached --quiet || git commit -m "Daily job scan"
+          git push
