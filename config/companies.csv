@@ -1,0 +1,6 @@
+company_name,category,homepage_url,careers_url,check_url,render_mode,active,notes
+IDLC Finance PLC,NBFI,https://idlc.com,,,auto,yes,Starter row; bootstrap adds the remaining companies
+IPDC Finance Ltd,NBFI,https://www.ipdcbd.com,,,auto,yes,Starter row
+LankaBangla Finance PLC,NBFI,https://www.lankabangla.com,,,auto,yes,Starter row
+BRAC EPL Stock Brokerage Ltd,Stock Broker / TREC Holder,https://bracepl.com,,,auto,yes,Starter row
+EBL Securities PLC,Stock Broker / TREC Holder,https://www.eblsecurities.com,,,auto,yes,Starter row

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bangladesh Finance Job Monitor</title>
+  <style>
+    :root { font-family: Inter, system-ui, sans-serif; line-height: 1.45; }
+    body { margin: 0; background: #f6f7f9; color: #18202a; }
+    main { max-width: 1400px; margin: auto; padding: 24px; }
+    h1 { margin-bottom: 4px; }
+    .muted { color: #657180; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 12px; margin: 22px 0; }
+    .card { background: white; border: 1px solid #e1e5ea; border-radius: 12px; padding: 16px; }
+    .number { font-size: 28px; font-weight: 750; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+    input, select { padding: 10px 12px; border: 1px solid #cbd2da; border-radius: 8px; background: white; }
+    input { min-width: 280px; flex: 1; }
+    .table-wrap { overflow-x: auto; background: white; border: 1px solid #e1e5ea; border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; min-width: 1000px; }
+    th, td { text-align: left; padding: 11px 12px; border-bottom: 1px solid #edf0f3; vertical-align: top; }
+    th { position: sticky; top: 0; background: #fafbfc; }
+    .status { display: inline-block; border-radius: 999px; padding: 4px 9px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .job-found { background: #dff7e8; color: #126b38; }
+    .job-not-found { background: #edf0f3; color: #4c5968; }
+    .manual-review { background: #fff1c7; color: #765600; }
+    .check-failed, .blocked { background: #ffe1e1; color: #8c1d1d; }
+    .title { display: inline-block; padding: 3px 7px; margin: 2px 3px 2px 0; border-radius: 6px; background: #eef3ff; }
+    .new { outline: 2px solid #7ea3ff; }
+    a { color: #2057b5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .small { font-size: 12px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Bangladesh Finance Job Monitor</h1>
+  <div class="muted">Last checked: {{ data.generated_at }} · Times shown in Asia/Dhaka</div>
+
+  <section class="cards">
+    <div class="card"><div class="muted">Total</div><div class="number">{{ data.summary["TOTAL"] }}</div></div>
+    <div class="card"><div class="muted">Job Found</div><div class="number">{{ data.summary["JOB FOUND"] }}</div></div>
+    <div class="card"><div class="muted">Job Not Found</div><div class="number">{{ data.summary["JOB NOT FOUND"] }}</div></div>
+    <div class="card"><div class="muted">Manual Review</div><div class="number">{{ data.summary["MANUAL REVIEW"] }}</div></div>
+    <div class="card"><div class="muted">Failed / Blocked</div><div class="number">{{ data.summary["CHECK FAILED"] + data.summary["BLOCKED"] }}</div></div>
+  </section>
+
+  <div class="controls">
+    <input id="search" placeholder="Search company, category, title...">
+    <select id="status">
+      <option value="">All statuses</option>
+      <option>JOB FOUND</option>
+      <option>JOB NOT FOUND</option>
+      <option>MANUAL REVIEW</option>
+      <option>CHECK FAILED</option>
+      <option>BLOCKED</option>
+    </select>
+    <select id="category">
+      <option value="">All categories</option>
+      {% for category in data.results | map(attribute="category") | unique | sort %}
+      <option>{{ category }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table id="results">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>Company</th>
+          <th>Category</th>
+          <th>Titles found</th>
+          <th>Reason</th>
+          <th>Checked page</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data.results %}
+        <tr data-status="{{ item.status }}" data-category="{{ item.category }}">
+          <td><span class="status {{ item.status | lower | replace(' ', '-') }}">{{ item.status }}</span></td>
+          <td><strong>{{ item.company_name }}</strong></td>
+          <td>{{ item.category }}</td>
+          <td>
+            {% if item.titles %}
+              {% for title in item.titles %}
+                <span class="title {% if title in item.new_titles %}new{% endif %}">{{ title }}</span>
+              {% endfor %}
+            {% else %}<span class="muted">—</span>{% endif %}
+          </td>
+          <td class="small">{{ item.reason }}</td>
+          <td class="small">
+            {% if item.check_url %}<a href="{{ item.check_url }}" target="_blank" rel="noopener">Open page</a>{% else %}—{% endif %}
+            {% if item.used_browser %}<div class="muted">Browser-rendered</div>{% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</main>
+<script>
+const search = document.querySelector('#search');
+const status = document.querySelector('#status');
+const category = document.querySelector('#category');
+const rows = [...document.querySelectorAll('#results tbody tr')];
+function filterRows() {
+  const q = search.value.toLowerCase();
+  rows.forEach(row => {
+    const okText = row.innerText.toLowerCase().includes(q);
+    const okStatus = !status.value || row.dataset.status === status.value;
+    const okCategory = !category.value || row.dataset.category === category.value;
+    row.hidden = !(okText && okStatus && okCategory);
+  });
+}
+[search, status, category].forEach(x => x.addEventListener('input', filterRows));
+</script>
+</body>
+</html>

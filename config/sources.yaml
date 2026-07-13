@@ -1,0 +1,64 @@
+# Official master-list sources. The bootstrap script merges these into
+# config/companies.csv and preserves any career URLs you add manually.
+sources:
+  - name: Bangladesh Bank — Finance Companies
+    category: NBFI
+    url: https://www.bb.org.bd/en/index.php/links/links/2
+    parser: finance_company_links
+    active: true
+
+  - name: BSEC — Merchant Bankers
+    category: Merchant Bank
+    url: https://sec.gov.bd/home/merchantbanks
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Credit Rating Agencies
+    category: Credit Rating Agency
+    url: https://sec.gov.bd/home/cragency
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Asset Management Companies
+    category: Asset Management Company
+    url: https://sec.gov.bd/home/assetmancom
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Custodians
+    category: Custodian
+    url: https://sec.gov.bd/home/custodian
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Trustees
+    category: Trustee
+    url: https://sec.gov.bd/home/trusty
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Fund Managers
+    category: Fund Manager
+    url: https://sec.gov.bd/home/fundmng
+    parser: bsec_table
+    active: true
+
+  - name: BSEC — Market Makers
+    category: Market Maker
+    url: https://sec.gov.bd/home/market
+    parser: bsec_table
+    active: true
+
+  - name: CSE — Stock Brokers
+    category: Stock Broker / TREC Holder
+    url: https://www.cse.com.bd/stockbroker/all
+    parser: cse_brokers
+    active: true
+
+  # DSE currently blocks some automated requests. Keep this source enabled;
+  # the script will record a source error rather than deleting existing rows.
+  - name: DSE — TREC Holders
+    category: Stock Broker / TREC Holder
+    url: https://www.dsebd.org/list_of_member.php
+    parser: dse_brokers
+    active: true
