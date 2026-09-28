@@ -35,14 +35,14 @@
 <body>
 <main>
   <h1>Bangladesh Finance Job Monitor</h1>
-  <div class="muted">Last checked: 2026-09-27T15:12:16+06:00 · Times shown in Asia/Dhaka</div>
+  <div class="muted">Last checked: 2026-09-28T15:41:45+06:00 · Times shown in Asia/Dhaka</div>
 
   <section class="cards">
     <div class="card"><div class="muted">Total</div><div class="number">268</div></div>
-    <div class="card"><div class="muted">Job Found</div><div class="number">71</div></div>
-    <div class="card"><div class="muted">Job Not Found</div><div class="number">5</div></div>
+    <div class="card"><div class="muted">Job Found</div><div class="number">66</div></div>
+    <div class="card"><div class="muted">Job Not Found</div><div class="number">6</div></div>
     <div class="card"><div class="muted">Manual Review</div><div class="number">144</div></div>
-    <div class="card"><div class="muted">Failed / Blocked</div><div class="number">48</div></div>
+    <div class="card"><div class="muted">Failed / Blocked</div><div class="number">52</div></div>
   </section>
 
   <div class="controls">
@@ -740,7 +740,7 @@
           <td>
             <span class="muted">—</span>
           </td>
-          <td class="small">SSLError: HTTPSConnectionPool(host='www.racebd.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)')))</td>
+          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.racebd.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.racebd.com', port=443) at 0x7f3a8cf4e0f0>, 'Connection to www.racebd.com timed out. (connect timeout=25)'))</td>
           <td class="small">
             <a href="https://www.racebd.com" target="_blank" rel="noopener">Open page</a>
             
@@ -1069,16 +1069,16 @@
           </td>
         </tr>
         
-        <tr data-status="CHECK FAILED" data-category="Credit Rating Agency">
-          <td><span class="status check-failed">CHECK FAILED</span></td>
+        <tr data-status="JOB NOT FOUND" data-category="Credit Rating Agency">
+          <td><span class="status job-not-found">JOB NOT FOUND</span></td>
           <td><strong>Alpha Credit Rating Limited</strong></td>
           <td>Credit Rating Agency</td>
           <td>
             <span class="muted">—</span>
           </td>
-          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.alpharating.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.alpharating.com', port=443) at 0x7f1313e9bfb0>, 'Connection to www.alpharating.com timed out. (connect timeout=25)'))</td>
+          <td class="small">No vacancy signal or probable job title detected</td>
           <td class="small">
-            <a href="https://www.alpharating.com" target="_blank" rel="noopener">Open page</a>
+            <a href="https://www.alpharating.com/" target="_blank" rel="noopener">Open page</a>
             
           </td>
         </tr>
@@ -1203,45 +1203,31 @@
           </td>
         </tr>
         
-        <tr data-status="JOB FOUND" data-category="Credit Rating Agency">
-          <td><span class="status job-found">JOB FOUND</span></td>
+        <tr data-status="CHECK FAILED" data-category="Credit Rating Agency">
+          <td><span class="status check-failed">CHECK FAILED</span></td>
           <td><strong>National Credit Ratings Ltd</strong></td>
           <td>Credit Rating Agency</td>
           <td>
-            
-              
-                <span class="title ">Job Opportunity for Junior Financial Analyst (Deadline: 25 Sep 2026)</span>
-              
-                <span class="title ">The Address of National Credit Ratings Ltd: Zaman Tower (8th Floor) 37/2, Box Culvert Road, Purana Palton, Dhaka-1000.</span>
-              
-            
+            <span class="muted">—</span>
           </td>
-          <td class="small">Detected 2 probable title(s)</td>
+          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.ncrbd.com', port=443): Max retries exceeded with url: /career.php?nId=18&pId=18&nName=Career (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ncrbd.com', port=443) at 0x7f3a8c878320>, 'Connection to www.ncrbd.com timed out. (connect timeout=25)'))</td>
           <td class="small">
             <a href="https://www.ncrbd.com/career.php?nId=18&pId=18&nName=Career" target="_blank" rel="noopener">Open page</a>
             
           </td>
         </tr>
         
-        <tr data-status="JOB FOUND" data-category="Credit Rating Agency">
-          <td><span class="status job-found">JOB FOUND</span></td>
+        <tr data-status="CHECK FAILED" data-category="Credit Rating Agency">
+          <td><span class="status check-failed">CHECK FAILED</span></td>
           <td><strong>The Bangladesh Rating Agency Limited</strong></td>
           <td>Credit Rating Agency</td>
           <td>
-            
-              
-                <span class="title ">Credit Rating</span>
-              
-                <span class="title ">internationally trained human resources</span>
-              
-                <span class="title ">research</span>
-              
-            
+            <span class="muted">—</span>
           </td>
-          <td class="small">Detected 3 probable title(s)</td>
+          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.bdral.com', port=443): Max retries exceeded with url: /opportunity (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.bdral.com', port=443) at 0x7f3a8c8de660>, 'Connection to www.bdral.com timed out. (connect timeout=25)'))</td>
           <td class="small">
-            <a href="https://www.bdral.com/pages/view-content?id=6a5f4376a3180169ebcd2da7" target="_blank" rel="noopener">Open page</a>
-            <div class="muted">Browser-rendered</div>
+            <a href="https://www.bdral.com/opportunity" target="_blank" rel="noopener">Open page</a>
+            
           </td>
         </tr>
         
@@ -2318,14 +2304,22 @@
           <td>
             
               
-                <span class="title new">lankabangla-investments.com</span>
+                <span class="title new">Engineering</span>
+              
+                <span class="title new">Portfolio Management</span>
+              
+                <span class="title new">LankaBangla Investments PLC. Assurance Nazir Tower (Level 8) 65/B Kemal Ataturk Avenue Banani, Dhaka 1213, Bangladesh</span>
+              
+                <span class="title new">info@lankabangla-investments.com</span>
+              
+                <span class="title new">© LankaBangla Investments.</span>
               
             
           </td>
-          <td class="small">Detected 1 probable title(s)</td>
+          <td class="small">Detected 5 probable title(s)</td>
           <td class="small">
-            <a href="https://www.lankabangla-investments.com/.well-known/sgcaptcha/?r=%2F&y=ipc:13.89.126.65:1790500579.320" target="_blank" rel="noopener">Open page</a>
-            <div class="muted">Browser-rendered</div>
+            <a href="https://lankabangla-investments.com/" target="_blank" rel="noopener">Open page</a>
+            
           </td>
         </tr>
         
@@ -2378,15 +2372,15 @@
           <td>
             
               
-                <span class="title new">ONE OF THE LEADING INVESTMENT BANKS IN BANGLADESH WITH DIVERSE EXPERTISE ACROSS MULTIPLE SECTORS</span>
+                <span class="title ">ONE OF THE LEADING INVESTMENT BANKS IN BANGLADESH WITH DIVERSE EXPERTISE ACROSS MULTIPLE SECTORS</span>
               
-                <span class="title new">NDB Capital Limited offers wide range of investment banking services</span>
+                <span class="title ">NDB Capital Limited offers wide range of investment banking services</span>
               
-                <span class="title new">THE ONLY INTERNATIONAL INVESTMENT BANK IN BANGLADESH</span>
+                <span class="title ">THE ONLY INTERNATIONAL INVESTMENT BANK IN BANGLADESH</span>
               
-                <span class="title new">Portfolio Management View More >></span>
+                <span class="title ">Portfolio Management View More >></span>
               
-                <span class="title new">NDB Investment Bank</span>
+                <span class="title ">NDB Investment Bank</span>
               
             
           </td>
@@ -2530,15 +2524,11 @@
               
                 <span class="title ">Download IPO Portfolio Rules & Regulations</span>
               
-                <span class="title ">Assistant Manager – Issue Management Department</span>
-              
-                <span class="title ">Education: Finance/Business Background</span>
-              
-                <span class="title ">Education: Bachelor/Master Degree Finance/Business Background</span>
+                <span class="title new">Junior Officer, IT Department</span>
               
             
           </td>
-          <td class="small">Detected 6 probable title(s)</td>
+          <td class="small">Detected 4 probable title(s)</td>
           <td class="small">
             <a href="https://www.slflbd.com/career" target="_blank" rel="noopener">Open page</a>
             
@@ -2938,11 +2928,11 @@
           <td>
             
               
-                <span class="title new">Portfolio Management</span>
+                <span class="title ">Portfolio Management</span>
               
-                <span class="title new">Monthly Investment Plan</span>
+                <span class="title ">Monthly Investment Plan</span>
               
-                <span class="title new">Insights News Events Research & Publications FAQs Calculator Client Deposit Referral</span>
+                <span class="title ">Insights News Events Research & Publications FAQs Calculator Client Deposit Referral</span>
               
             
           </td>
@@ -3112,6 +3102,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3122,7 +3114,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3154,6 +3146,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3164,7 +3158,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3196,6 +3190,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3206,7 +3202,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3252,6 +3248,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3262,7 +3260,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3294,6 +3292,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3304,7 +3304,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3376,6 +3376,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3386,7 +3388,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3418,6 +3420,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3428,7 +3432,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3474,6 +3478,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3484,7 +3490,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3568,6 +3574,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3578,7 +3586,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3662,6 +3670,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3672,7 +3682,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3704,6 +3714,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -3714,7 +3726,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -3755,36 +3767,16 @@
           </td>
         </tr>
         
-        <tr data-status="JOB FOUND" data-category="NBFI">
-          <td><span class="status job-found">JOB FOUND</span></td>
+        <tr data-status="CHECK FAILED" data-category="NBFI">
+          <td><span class="status check-failed">CHECK FAILED</span></td>
           <td><strong>Hajj Finance Company Limited</strong></td>
           <td>NBFI</td>
           <td>
-            
-              
-                <span class="title new">Executive Committee</span>
-              
-                <span class="title new">Risk Management Committee</span>
-              
-                <span class="title new">Stakeholder Information Annual Audited Report Monthly Base Rate Credit Rating</span>
-              
-                <span class="title new">Hajj Finance Company PLC</span>
-              
-                <span class="title new">Home Finance</span>
-              
-                <span class="title new">Vehicle Finance</span>
-              
-                <span class="title new">Consumer Durable Finance</span>
-              
-                <span class="title new">Industrial Finance</span>
-              
-                <span class="title new">Head Office</span>
-              
-            
+            <span class="muted">—</span>
           </td>
-          <td class="small">Detected 9 probable title(s)</td>
+          <td class="small">ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))</td>
           <td class="small">
-            <a href="https://hajjfinance.net/" target="_blank" rel="noopener">Open page</a>
+            <a href="http://www.hajjfinance.net" target="_blank" rel="noopener">Open page</a>
             
           </td>
         </tr>
@@ -3917,26 +3909,14 @@
           </td>
         </tr>
         
-        <tr data-status="JOB FOUND" data-category="NBFI">
-          <td><span class="status job-found">JOB FOUND</span></td>
+        <tr data-status="CHECK FAILED" data-category="NBFI">
+          <td><span class="status check-failed">CHECK FAILED</span></td>
           <td><strong>http://www.meridianfinancebd.com</strong></td>
           <td>NBFI</td>
           <td>
-            
-              
-                <span class="title ">CLUSTER FINANCE POLICY</span>
-              
-                <span class="title ">Islamic Finance Shariar Supervisory Committee Deposit Products Investment Products Forms & Documents</span>
-              
-                <span class="title ">Investor Relations Annual Report Credit Rating Financial Highlights Financial Statements Shareholding Structure</span>
-              
-                <span class="title ">Email : info@meridianfinancebd.com</span>
-              
-                <span class="title ">Our Leadership Team Board of Directors Executive Committee Audit Committee Management Team</span>
-              
-            
+            <span class="muted">—</span>
           </td>
-          <td class="small">Detected 5 probable title(s)</td>
+          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.meridianfinancebd.com', port=443): Max retries exceeded with url: /career (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.meridianfinancebd.com', port=443) at 0x7f3a8b89f3b0>, 'Connection to www.meridianfinancebd.com timed out. (connect timeout=25)'))</td>
           <td class="small">
             <a href="https://www.meridianfinancebd.com/career" target="_blank" rel="noopener">Open page</a>
             
@@ -4056,6 +4036,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -4066,7 +4048,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -4098,6 +4080,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -4108,7 +4092,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -4169,26 +4153,14 @@
           </td>
         </tr>
         
-        <tr data-status="JOB FOUND" data-category="NBFI">
-          <td><span class="status job-found">JOB FOUND</span></td>
+        <tr data-status="CHECK FAILED" data-category="NBFI">
+          <td><span class="status check-failed">CHECK FAILED</span></td>
           <td><strong>Meridian Finance and Investment Ltd.</strong></td>
           <td>NBFI</td>
           <td>
-            
-              
-                <span class="title ">CLUSTER FINANCE POLICY</span>
-              
-                <span class="title ">Islamic Finance Shariar Supervisory Committee Deposit Products Investment Products Forms & Documents</span>
-              
-                <span class="title ">Investor Relations Annual Report Credit Rating Financial Highlights Financial Statements Shareholding Structure</span>
-              
-                <span class="title ">Email : info@meridianfinancebd.com</span>
-              
-                <span class="title ">Our Leadership Team Board of Directors Executive Committee Audit Committee Management Team</span>
-              
-            
+            <span class="muted">—</span>
           </td>
-          <td class="small">Detected 5 probable title(s)</td>
+          <td class="small">ConnectTimeout: HTTPSConnectionPool(host='www.meridianfinancebd.com', port=443): Max retries exceeded with url: /career (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.meridianfinancebd.com', port=443) at 0x7f3a8ceab530>, 'Connection to www.meridianfinancebd.com timed out. (connect timeout=25)'))</td>
           <td class="small">
             <a href="https://www.meridianfinancebd.com/career" target="_blank" rel="noopener">Open page</a>
             
@@ -4220,6 +4192,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -4230,7 +4204,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -4470,6 +4444,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -4480,7 +4456,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -4494,19 +4470,19 @@
           <td>
             
               
-                <span class="title new">Services Eligibility of Availing Finance Funding Application Processing Industrial Sectors Promoted Product Range Schedule and Charges</span>
+                <span class="title ">Services Eligibility of Availing Finance Funding Application Processing Industrial Sectors Promoted Product Range Schedule and Charges</span>
               
-                <span class="title new">Sustainable Finance</span>
+                <span class="title ">Sustainable Finance</span>
               
-                <span class="title new">Welcome to Saudi Bangladesh Industrial and Agricultural Investment Company Limited (SABINCO)</span>
+                <span class="title ">Welcome to Saudi Bangladesh Industrial and Agricultural Investment Company Limited (SABINCO)</span>
               
-                <span class="title new">Provide superior customer service and competitive pricing.</span>
+                <span class="title ">Provide superior customer service and competitive pricing.</span>
               
-                <span class="title new">Strictly adhere to credit norms, exercise due diligence and ensure effective management of risk, and</span>
+                <span class="title ">Strictly adhere to credit norms, exercise due diligence and ensure effective management of risk, and</span>
               
-                <span class="title new">Legal Business License</span>
+                <span class="title ">Legal Business License</span>
               
-                <span class="title new">DETAILS PRODUCTS & INVESTMENT SERVICES</span>
+                <span class="title ">DETAILS PRODUCTS & INVESTMENT SERVICES</span>
               
             
           </td>
@@ -4542,6 +4518,8 @@
               
                 <span class="title ">Publication Weekly Fortnightly Monthly Quarterly Half Yearly Annual Research Work Special Publication Others</span>
               
+                <span class="title new">IBRPD Circular No. 01: Guidelines on Islamic Credit Card Operations of Banks.</span>
+              
                 <span class="title ">INVESTMENT FACILITY</span>
               
                 <span class="title ">Foreign Investment and Financing Portal</span>
@@ -4552,7 +4530,7 @@
               
             
           </td>
-          <td class="small">Detected 13 probable title(s)</td>
+          <td class="small">Detected 14 probable title(s)</td>
           <td class="small">
             <a href="https://www.bb.org.bd/en/index.php" target="_blank" rel="noopener">Open page</a>
             
@@ -4566,13 +4544,13 @@
           <td>
             
               
-                <span class="title new">REGULATORY COMPLIANCE</span>
+                <span class="title ">REGULATORY COMPLIANCE</span>
               
-                <span class="title new">CREDIT RATING</span>
+                <span class="title ">CREDIT RATING</span>
               
-                <span class="title new">When you join SFIL Finance PLC. you’ll get more than a job. You’ll get a career.</span>
+                <span class="title ">When you join SFIL Finance PLC. you’ll get more than a job. You’ll get a career.</span>
               
-                <span class="title new">INTERNSHIP PROGRAMS</span>
+                <span class="title ">INTERNSHIP PROGRAMS</span>
               
             
           </td>
@@ -4604,7 +4582,7 @@
           <td>
             <span class="muted">—</span>
           </td>
-          <td class="small">ConnectTimeout: HTTPConnectionPool(host='www.ulc.com.bd', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ulc.com.bd', port=80) at 0x7f1312c2af00>, 'Connection to www.ulc.com.bd timed out. (connect timeout=25)'))</td>
+          <td class="small">ConnectTimeout: HTTPConnectionPool(host='www.ulc.com.bd', port=80): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPConnection(host='www.ulc.com.bd', port=80) at 0x7f3a8b88eae0>, 'Connection to www.ulc.com.bd timed out. (connect timeout=25)'))</td>
           <td class="small">
             <a href="http://www.ulc.com.bd" target="_blank" rel="noopener">Open page</a>
             
@@ -4738,7 +4716,7 @@
           <td>
             
               
-                <span class="title new">Research Team</span>
+                <span class="title ">Research Team</span>
               
             
           </td>
